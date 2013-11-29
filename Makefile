@@ -23,18 +23,5 @@ nulnfs: nulnfs.o
 	${CC} -c -o $@ ${CCFLAGS} $<
 
 clean:
-	${RM} -fv *.o
-
-install: ${package}
-	install -d ${DESTDIR}/usr/bin/
-	install $< ${DESTDIR}/usr/bin/
-
-
-distclean: clean
-	${RM} -fv ${package}
-
-
-help:
-	@echo "srcs=${srcs}"
-	@echo "objs=${objs}"
+	${RM} -f *.o nullfs nul1fs nulnfs
 
